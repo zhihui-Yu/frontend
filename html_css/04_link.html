@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 标签之间间隔的空字符，不论几个，都识别为一个，如果不需要 标签间不能有空格 -->
+    <a href="https://www.jd.com/" target="_self">跳转jd</a>
+    <a href="https://www.baidu.com/" target="_blank">跳百度</a>
+
+    <!-- 跳转文件, 可以直接打开则显示，不能被浏览器解析的会让你下载到本地 -->
+    <a href="resources/wallhaven-exxj3l_2560x1440.png">背景图</a>
+    <!-- 想处罚下载，需要加download，value是文件名称 -->
+    <a href="resources/wallhaven-exxj3l_2560x1440.png" download="">背景图[可下载]</a>
+
+    <a href="https://pss.bdstatic.com/static/superman/img/logo/bd_logo1-66368c33f8.png">百度图片</a>
+
+    <a href="#mao-dian">跳到具体锚点</a>
+    <!-- 定义锚点，区分大小写，name重复话 先入为主 -->
+    <a name="mao-dian"></a> 
+
+    <a href="#mao-dian-2">跳到具体锚点2</a>
+    <!-- 推荐用id -->
+    <p id="mao-dian-2">xxxx</p>
+
+    <a href="#">回到顶部</a>
+    <a href="">刷新</a>
+    <a href="javascript:alert(1);">点我弹窗</a>
+
+    <!-- 跳转到应用 -->
+    <a href="tel:10010">电话联系</a>
+    <a href="mailto:test@qq.com">邮件联系</a>
+    <a href="sms:10086">短信联系</a>
+</body>
+</html>
