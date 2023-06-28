@@ -24,6 +24,10 @@
   - HyperText Markup Language, 超文本标记语言 
   - 超：超链接，可以指向网页 文件 锚点 应用
 
+- CSS
+  - Cascading Style Sheets 层叠样式表
+  - 也是一种标记语言,用于给 html 结构设置样式, 例如: 文字大小,颜色,元素宽高等等
+
 - 规范 [W3C制定]
   - 指定html 规范：<!DOCTYPE html>
   - 指定编码类型： <meta charset="UTF-8">
@@ -46,3 +50,4 @@
 2023-6-25 25节
 2023-6-26 34节
 2023-6-27 41节
+2023-6-28 58节
