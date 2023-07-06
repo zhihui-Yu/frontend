@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 通配符 */
+        * {
+            color: bisque;
+        }
+
+        /* 元素选择器 */
+        h2 {
+            color: violet;
+        }
+
+        h3 {
+            color: black;
+        }
+
+        /* 类选择器 */
+        .one {
+            font-size: 10px;
+            color: aquamarine;
+        }
+
+        .two{
+            font-size: 20px;
+        }
+
+        .border{
+            border: 1px solid black;
+        }
+        
+        .beauty {
+            font-size: 15px;
+        }
+
+        /* id 选择器 */
+        #id1{
+            color: brown;
+        }
+
+        /* 交集选择器, 必须元素开头 */
+        p.beauty{
+            color: gray;
+        }
+
+        /* 并集选择器 */
+        .beauty,
+        .bg,
+        #id1,
+        .one{
+            font-size: 10px;
+            background-color:thistle;
+            width: 200px;
+        }
+
+        /* 后代选择器 可以是元素后代，可以是class后代，id 后代 */
+        ul li{
+            color: red;
+        }
+
+        ul a{
+            color: #000;
+        }
+
+        .subject li{
+            color:blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <p class="one">xxxxxxxxxxxxxxxx</p>
+    <p class="two">pppppppppppppppp</p>
+    <!-- 标签内属性重复赋值， 后者忽略， 如 class:one class:two 只有one有效 -->
+    <p class="one border" >one border</p>
+
+    <p id="id1">odododododod</p>
+
+    <p class="beauty">小狗</p>
+
+    <p class="bg">我有背景</p>
+
+    <ul>
+        <li>抽烟</li>
+        <li>喝酒</li>
+        <div>
+            <li>烫头</li>
+            <a href="#">泡吧</a>
+        </div>
+    </ul>
+
+    <ul class="subject">
+        <li>JAVA</li>
+        <li>WEB</li>
+        <li>PYTHON</li>
+    </ul>
+</body>
+
+</html>
