@@ -46,6 +46,22 @@
   - 使用语义化标签[p 表达段落，h表达标题]，增强阅读性，有利于SEO
 
 
+- 块级元素 block
+  - css可以设置宽高
+  - 独占一行，宽高由内容撑开
+  > <html> <body> <h1>-<h6> <hr> <p> <pre> <div> <ul> <ol> <li> <dl> <dt> <dd> <table> <tbody> <thead> <tfoot> <tr> <caption> <form> <option>
+
+- 行内元素 inline
+  - css不能设置宽高
+  - 不独占一行，宽高由内容撑开
+  > <br> <em> <strong> <sup> <sub> <del> <ins> <a> <label>
+
+- 行内块元素 inline-block
+  - css可以设置宽高
+  - 不独占一行，宽高由内容撑开
+  > <img> <td> <th> <input> <textarea> <select> <button> <iframe>
+
+
 共200节
 2023-6-25 25节
 2023-6-26 34节
@@ -54,3 +70,6 @@
 2023-07-04 71节
 2023-07-06 85节
 2023-07-13 93节
+2023-07-19 103节
+2023-07-24 108节
+2023-07-26 117节

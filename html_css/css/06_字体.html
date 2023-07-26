@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class1 {
+            font-size: 40px;
+            font-family: "微软雅黑";
+            /* 斜体 推荐使用*/
+            font-style: italic;
+            font-weight: lighter;
+        }
+
+        .class2 {
+            font-size: 30px;
+            font-family: "宋体";
+            /* 斜体 */
+            font-style: oblique;
+            font-weight: normal;
+        }
+        
+        .class3 {
+            font-size: 20px;
+            font-family: "楷体";
+            font-weight: bold;
+        }
+        
+        .class4 {
+            font-size: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bolder;
+        }
+
+        .class5 {
+            /*
+            serif:       衬线字体 [字体有棱角]
+            sans-serif:  非衬线字体 [字体五棱角]
+
+            优先级从左到右,有就使用,没有就下一个. sans-serif: 兜底,使用非衬线字体
+            推荐使用英文名
+            */
+            font-family: 'Courier New', "楷体", "宋体", sans-serif;
+
+            /* 
+               顺序固定: 其他属性 字体大小 字体族
+            */
+            font: bolder 100px "宋体";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="class1">class1</div>
+    <div class="class2">class2</div>
+    <div class="class3">class3</div>
+    <!-- 最小12px,chrom; 可配置 -->
+    <div class="class4">class4</div>
+    <!-- 默认16px，chrome； 可以配置 -->
+    <div>class5</div>
+</body>
+
+</html>
