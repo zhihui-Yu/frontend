@@ -1,0 +1,82 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .none{
+            display: none;
+        }
+        .outer {
+            width: 500px;
+            height: 500px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+
+        .box1 {
+            background-color: aquamarine;
+        }
+
+        .box2 {
+            /* 
+              基于 原来位置的相对定位
+              - 不脱离文档流，原来的位置仍会空着
+              - 比普通元素层级高，显示上面；如果两个都是定位元素，则后写的上面
+              - left和right不能一起设置[left 有效]，top和bottom不能一直设置 [top有效]
+              - 使用相对定位后也能写浮动，但是不推荐
+              - 使用相对定位后也能写margin，但不推荐
+            */
+            position: relative;
+            top: 80px;
+            /* bottom: 1000px;  */
+            left: 80px;
+            /* right: 1000px; */
+            background-color: green;
+        }
+
+        .box2-2 {
+            /* 
+              基于包含块定位 [包含块： 1.对于没有脱离文档流的元素，包含块是父元素 2. 脱离文档流：包含块就是其第一个拥有定位属性的祖先，都没有就是基于html元素]
+              - 脱离文档流，对后面兄弟和父元素有影响
+              -  left和right不能一起设置，top和bottom不能一直设置
+              - 绝对定位、浮动不能一起设置；如果一直设置 浮动失效，定位为主
+              - 使用绝对定位后也能写margin，但不推荐
+              - 无论是什么[行，块，行内块]元素，设置了绝对定位后，都是定位元素
+                - 定位元素： 宽高由内容决定，可以自由设置宽高
+            */
+            position: absolute;
+            top: 80px;
+            left: 80px;
+            background-color: green;
+        }
+
+
+        .box3 {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer none">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+
+    <div class="outer">
+        <div class="box box1">1</div>
+        <span class="box box2-2">2</span>
+        <div class="box box3">3</div>
+    </div>
+
+</body>
+
+</html>
