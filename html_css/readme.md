@@ -41,34 +41,11 @@
 > VSCODE 快捷：
 > 删除行： ctrl + shift + k
 > 复制行：shift + alt + 上/下
+> 折叠： 开头加 #region  末尾加 #endregion
 
 - 代码规范
   - 使用语义化标签[p 表达段落，h表达标题]，增强阅读性，有利于SEO
 
-
-- 块级元素 block
-  - css可以设置宽高
-  - 独占一行，宽高由内容撑开
-  > <html> <body> <h1>-<h6> <hr> <p> <pre> <div> <ul> <ol> <li> <dl> <dt> <dd> <table> <tbody> <thead> <tfoot> <tr> <caption> <form> <option>
-
-- 行内元素 inline
-  - css不能设置宽高
-  - 不独占一行，宽高由内容撑开
-  > <br> <em> <strong> <sup> <sub> <del> <ins> <a> <label>
-
-- 行内块元素 inline-block
-  - css可以设置宽高
-  - 不独占一行，宽高由内容撑开
-  > <img> <td> <th> <input> <textarea> <select> <button> <iframe>
-
-- 垂直居中方式
-  - 行内元素可以用 vertical-algin
-  - 其他元素： line-height=height
-
-- 页面设计
-  - 版心
-    - 重要部分固定长宽，根据主流浏览器设置
-  - 响应式布局
 
 共200节
 2023-6-25 25节
@@ -83,5 +60,6 @@
 2023-07-26 117节
 2023-07-30 141节
 2023-08-05 145节
+2023-08-06 161节
 
 left -- 22h
