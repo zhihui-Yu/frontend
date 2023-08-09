@@ -38,10 +38,10 @@
   - W3School
   - MDN
 
-> VSCODE 快捷：
-> 删除行： ctrl + shift + k
-> 复制行：shift + alt + 上/下
-> 折叠： 开头加 #region  末尾加 #endregion
+- VSCODE 快捷：
+  - 删除行： ctrl + shift + k
+  - 复制行：shift + alt + 上/下
+  - 折叠： 开头加 #region  末尾加 #endregion
 
 - 代码规范
   - 使用语义化标签[p 表达段落，h表达标题]，增强阅读性，有利于SEO

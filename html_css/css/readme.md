@@ -1,5 +1,4 @@
 # CSS
----
 
 ## 常用布局
 
@@ -21,22 +20,21 @@
 - 块级元素 block
   - css可以设置宽高
   - 独占一行，宽高由内容撑开
- > <html> <body> <h1>-<h6> <hr> <p> <pre> <div> <ul> <ol> <li> <dl> <dt> <dd> <table> <tbody> <thead> <tfoot> <tr> <caption> <form> <option>
-
+  > 块级元素有: html body h1-h6 hr p pre div ul ol li dl dt dd table tbody thead tfoot tr caption form option
 - 行内元素 inline
   - css不能设置宽高
   - 不独占一行，宽高由内容撑开
-  > <br> <em> <strong> <sup> <sub> <del> <ins> <a> <label>
+  > 行内元素有：br em strong sup sub del ins a label
 
 - 行内块元素 inline-block
   - css可以设置宽高
   - 不独占一行，宽高由内容撑开
-  > <img> <td> <th> <input> <textarea> <select> <button> <iframe>
+  > 行内块元素： img td th input textarea select button iframe
 
 - 页面设计
   - 版心
     - 重要部分固定长宽，根据主流浏览器设置
-    -      高由内容撑开，默认不设置高
+    - 高由内容撑开，默认不设置高
   - 响应式布局
 
 - 默认样式
