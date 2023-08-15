@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+          可以被继承的元素
+          - 字体属性 文本属性(除了 vertical-align) 文字颜色
+          
+          不可以被继承的元素
+          - 边框 背景 内边距 外边距 宽高 溢出方式
+
+          继承的样式优先级最低
+          有一些标签有默认的样式，如 a， li，h1，p， body
+
+
+          行内元素和行内块元素在父元素里面，可以当成文本来处理
+        */
+        .class1{
+            height: 600px;
+            padding: 50px;
+            background-color: gray;
+            /* 子元素共享 */
+            color: yellow;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .class2{
+            height: 400px;
+            padding: 40px;
+            background-color: orange;
+        }
+
+        .class3{
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="class1">
+        <div class="class2">
+            <div class="class3">你好啊</div>
+        </div>
+    </div>
+    
+</body>
+</html>

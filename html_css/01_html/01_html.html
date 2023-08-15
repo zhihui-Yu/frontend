@@ -1,0 +1,57 @@
+<!-- 在开头一定要指定是类型，不然会走浏览器默认类型加载，就不一定是自己想要的了 -->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <!-- 指定编码语言，以便浏览器可以按编码方式解码 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 块级元素，独占一行 -->
+    <marquee behavior="" loop="" direction="">我会轮询播放</marquee>
+    <!-- h 标签不能互相嵌套 -->
+    <h1>我是一级标题</h1>
+    <h2>我是二级标题</h2>
+    <h3>我是三级标题</h3>
+    <h4>我是四级标题</h4>
+    <h5>我是五级标题</h5>
+    <h6>我是六级标题</h6>
+
+    <div>
+        <!-- p 标签不能嵌套 h标签 和 p 标签，div 标签 -->
+        <p>我是一个段落</p>
+        <!-- div会被移到p 外面 -->
+        <p><div>内嵌div</div></p>
+    </div>
+
+    <!-- 行内元素， 不独占一行 -->
+    <input type="text">
+    <span>xxx </span>
+
+    <hr>
+
+    <!-- 规则一: 块级元素中能写：行内元素、块级元素（几乎都可以） -->
+    <div>
+        <h1>标题</h1>
+        <div>
+            <span>
+                span
+            </span>
+        </div>
+    </div>
+    <hr>
+    <!-- 规则二：行内元素中能写：行内元素，不能写块级元素 -->
+    <span>
+        <span>span</span>
+        <input type="text" name="" id="">
+        <span>span</span>
+    </span>
+
+    <hr>
+</body>
+
+</html>

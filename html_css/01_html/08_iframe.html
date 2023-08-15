@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- frameborder 边框 只有 0 / 1 -->
+    <!-- 应用场景: 嵌入广告 -->
+    <!-- <iframe src="https://www.bilibili.com/" frameborder="0" height="500" width="1000"></iframe> -->
+
+    <!-- 可以嵌入任何文件[file/jpg/gif/zip..], 能打开就打开, 不能就让下载 -->
+
+    <!-- 与超链接 a 标签中的target配合 -->
+    <a href="https://www.bilibili.com/" target="container">b 站</a>
+
+    <!-- 与form中的target 配合 -->
+    <form action="https://www.bilibili.com/" target="container">
+        <input type="text" name="keyword" id="">
+        <input type="submit">
+    </form>
+    <iframe name="container" src="" frameborder="0"  height="500" width="1000"></iframe>
+</body>
+</html>

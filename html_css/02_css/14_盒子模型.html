@@ -1,0 +1,115 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #id1 {
+            /* 盒子模型的大小 = content + padding + border */
+            height: 100px;
+            width: 100px;
+            /* padding：
+               - 一个值： 上下左右
+               - 两个值:  上下 左右 
+               - 三个值： 上 左右 下
+               - 四个值： 上 右 下 左
+                
+               margin也一样 
+            */
+            padding: 20px;
+            /* 不设置宽时候，margin对盒子大小有影响 */
+            margin: 20px;
+            background-color: aqua;
+            /* 默认是3px 黑色 */
+            border: 5px dashed;
+        }
+
+        #id2 {
+            /* width/min-max 二选一，如果都加了，则最小取 max(min,width) */
+            width: 400px;
+            min-width: 600px;
+            max-width: 1000px;
+            height: 200px;
+            min-height: 50px;
+            max-height: 200px;
+            background-color: antiquewhite;
+            /* 扩展：可以单独设置上下左右的颜色，类型， 边缘*/
+            /* border-style: dashed; */
+            border-right-style: dotted;
+            border-top-right-radius: 5%;
+            border-left-style: groove;
+            border-left-color: blue;
+
+            /* 解决溢出 */
+            overflow: auto;
+            /* 不推荐单独写 */
+            /* overflow-x: auto; */
+            /* overflow-y: auto; */
+
+
+            /* 不显示元素 */
+            /* display 不占位置 */
+            /* display: none; */
+            /* 占位置 */
+            /* visibility: hidden; */
+        }
+
+        /* 行内元素 上下内边距设置了，依旧会被其他元素填充，所以尽量不设置上下。 左右没问题 */
+
+
+
+        .class2{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="id1">你好啊</div>
+    <div id="id2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptatibus adipisci tempora fugit eligendi
+        amet ut molestiae possimus reprehenderit, facere ipsam optio sed architecto sequi! Perferendis nisi fugit
+        accusamus architecto!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptatibus adipisci tempora fugit eligendi
+        amet ut molestiae possimus reprehenderit, facere ipsam optio sed architecto sequi! Perferendis nisi fugit
+        accusamus architecto!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptatibus adipisci tempora fugit eligendi
+        amet ut molestiae possimus reprehenderit, facere ipsam optio sed architecto sequi! Perferendis nisi fugit
+        accusamus architecto!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptatibus adipisci tempora fugit eligendi
+        amet ut molestiae possimus reprehenderit, facere ipsam optio sed architecto sequi! Perferendis nisi fugit
+        accusamus architecto!
+    </div>
+
+    <!-- 
+        margin注意事项
+        1. 子元素的margin是基于父元素的content来算的
+        2. margin 会影响自身和后面的元素
+        3. 行内元素的 
+        4. marigin，auto代表尽可能远，左边auto就靠右，两侧auto就是居中
+        5. margin可以是负数
+     -->
+
+    <!-- 
+        margin 塌陷问题:
+        - 给第一个子元素设置上边距 / 给最后一个元素设置下边距 会被父元素拿去用，子元素没效果
+
+        解决：
+        - 设置border. 不能为0px
+        - 设置 padding 不能为0px
+        - overflow: hidden
+
+        上下margin会合并，左右不会。 比如上面的元素A margin-bottom: 50px，下面元素B margin-top:50px;
+        最终两个元素之间的空隙只有50px
+    -->
+
+
+    <div class="class2">
+        haha 哈哈
+    </div>
+</body>
+
+</html>

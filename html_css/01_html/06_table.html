@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 
+        border > 1时,只控制外层 
+        cellspacing 控制单元格间距, 0 没距离
+    -->
+    <table border="10" cellspacing="20" width="500" height="100">
+        <!-- 表格标题 -->
+        <caption>学生信息</caption>
+        <!-- 
+            表格头部 
+              align 水平居中
+              valign 垂直线
+        -->
+        <thead height="50" align="center" valign="middle">
+            <!-- th 标题, th/td设置格式影响相应的行列, rowspan 跨行 colspan 跨列,合并单元格 -->
+            <th width="50">姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>民族</th>
+            <th>政治面貌</th>
+        </thead>
+        <!-- 
+            表格主题 
+            thead+tbody+tfoot>= table height, 不然设置没效果
+        -->
+        <tbody height="100" align="center" valign="middle">
+            <!-- tr 一行数据, td 单元格 -->
+            <tr height="100" align="center" valign="middle">
+                <td>张三</td>
+                <td>男</td>
+                <td>18</td>
+                <td>汉族</td>
+                <td>团员</td>
+            </tr>
+            <tr>
+                <td>张四</td>
+                <td>男</td>
+                <td>18</td>
+                <td>汉族</td>
+                <td>团员</td>
+            </tr>
+            <tr>
+                <td>张五</td>
+                <td>男</td>
+                <td>18</td>
+                <td>汉族</td>
+                <td>团员</td>
+            </tr>
+        </tbody>
+        <!-- 表格脚注 -->
+        <tfoot height="50" align="center" valign="middle">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>共计: 4人</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

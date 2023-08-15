@@ -1,0 +1,137 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .class1 {
+            color: rgb(206, 192, 37);
+        }
+
+        .class3 {
+            /* 字母间距 */
+            letter-spacing: 20px;
+        }
+
+        .class4 {
+            /* 字母间距: 按空格识别单词 */
+            word-spacing: 20px;
+        }
+
+        .class5 {
+            /* 上划的红色波浪线 */
+            text-decoration: overline wavy red;
+        }
+
+        .class6 {
+            /* 下划的绿色虚线 */
+            text-decoration: underline dotted green;
+        }
+
+        .class7 {
+            /* 删除线 */
+            text-decoration: line-through;
+        }
+
+        .class8 {
+            /* 删除a标签的下划线 */
+            text-decoration: none;
+        }
+
+        .class9 {
+            font-size: 20px;
+            text-indent: 40px;
+        }
+
+        .class10{
+            font-size: 30px;
+            background-color: blanchedalmond;
+            text-align: center;
+        }
+
+        .line{
+            font-size: 40px;
+            background-color: skyblue;
+            /* 第一种写法， 尽量不要和font-size一样 */
+            /* line-height: 40px; */
+
+            /* 第二种写法 */
+            /* line-height: normal; */
+
+            /* 第三种写法  font-size的1.5倍  用的多*/
+            /* line-height: 1.5; */
+
+            /* 第四种写法 */
+            /* line-height: 150%; */
+        }
+
+        .class11{
+            width: 500px;
+            height: 300px;
+            /* vertical-align:bottom; 只对行内元素有效 */
+            font-size: 30px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 颜色 -->
+    <div class="class1">文本颜色细看05_颜色</div>
+    <!-- 间距 -->
+    <div class="class2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore eius quibusdam, error assumenda
+        nam culpa dolor ullam inventore ipsum expedita maxime ab deserunt voluptatum fuga officiis molestias eos beatae
+        at.哈哈哈</div>
+    <div class="class3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore eius quibusdam, error assumenda
+        nam culpa dolor ullam inventore ipsum expedita maxime ab deserunt voluptatum fuga officiis molestias eos beatae
+        at.哈哈哈</div>
+    <div class="class4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore eius quibusdam, error assumenda
+        nam culpa dolor ullam inventore ipsum expedita maxime ab deserunt voluptatum fuga officiis molestias eos beatae
+        at.哈哈哈</div>
+    <br>
+    <!-- 修饰 -->
+    <div class="class5">class5</div>
+    <div class="class6">class6</div>
+    <div class="class7">class7</div>
+    <div class="class8"><a href="xxxx" class="class8"> class8</a></div>
+    <ins>ins</ins>
+    <del>del</del>
+
+    <br>
+
+    <!-- 缩进 -->
+    <div class="class9">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, est rem. Incidunt quisquam illo quo
+        dolore? Iure natus amet quas labore nemo quaerat modi debitis officia, ipsa impedit possimus consectetur.
+    </div>
+
+    <!-- 对齐 -->
+    <div class="class10">
+        对齐
+    </div>
+
+    <!-- 
+        行高: 基线对齐
+            注意事项:
+            - 行高过小: 文字重叠,最小为0,不能为负数
+            - 行高是可继承的
+            - line-height 和 height 关系: 如果设置height,标签高度就是height值,没设置就是 line-height * 行数
+
+            场景
+            - 多行文字: 控制行与行之间的距离
+            - 单行文字: height = line-height, 实现文字垂直居中
+    -->
+    <div class="line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, cum illum, fugiat placeat magni ducimus pariatur soluta id quaerat doloribus non autem fuga, alias odio minima minus fugit? A, totam?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit vitae et velit similique odit corrupti rem earum consectetur nisi quisquam, iusto aspernatur unde tempore dolorem, dicta sapiente amet modi magni.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio alias, earum repellendus laboriosam placeat, magnam sint cum consectetur accusamus aliquam, fuga amet quae recusandae? Sunt repudiandae error saepe molestiae excepturi.
+    </div>
+
+
+    <!--  vertical-align: 对照一行中的最高元素的基线判断 -->
+    <div class="class11">
+        Lorem ipsum x <span style="font-size: 20px; vertical-align: top;">哈哈哈</span>
+    </div>
+</body>
+
+</html>

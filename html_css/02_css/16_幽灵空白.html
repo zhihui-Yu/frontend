@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            background-color: antiquewhite;
+            /* 1. 不设置文字； 文字用span包裹再设置字体大小 */
+            /* font-size: 0px; */
+        }
+        img{
+            width: 300px;
+            /* 2. 设置图片居中效果 不是baseline就行 */
+            vertical-align: bottom;
+
+            /* 3. 设置图片显示效果; 会把文字换行 */
+            /* display: block; */
+        }
+    </style>
+</head>
+<body>
+    <div> 
+        <!-- 多加了 一个x ，就能明确看出由于基于 X 的基线对齐，下面多了一点空白 -->
+        <img src="../images/wallhaven-exxj3l_2560x1440.png" alt=""> xg
+        <span></span>
+    </div>
+</body>
+</html>

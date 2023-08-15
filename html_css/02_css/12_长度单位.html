@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            font-size: 20px;
+        }
+        #id1{
+            font-size: 20px;
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+        }
+        #id2{
+            /* em = value * 当前元素的font-size值； 如果元素没有font-size，则找父元素*/
+            font-size: 20px;
+            width: 15em; 
+            height: 15em;
+            background-color: skyblue;
+        }
+        #id3{
+            /* rem = value * html元素的font-size值 */
+            font-size: 20px;
+            width: 15rem; 
+            height: 15rem;
+            background-color: lavender;
+        }
+
+        #id4{
+            font-size: 20px;
+            width: 300px; 
+            height: 300px;
+            background-color: honeydew;
+        }
+        #inside{
+            /* 根据父元素的宽高 * 百分比 */
+            width: 15%; 
+            height: 15%;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="id1">1</div>
+    <hr>
+    <div id="id2">2</div>
+    <hr>
+    <div id="id3">3</div>
+    <hr>
+    <div id="id4">
+        <div id="inside">4</div>
+    </div>
+</body>
+</html>

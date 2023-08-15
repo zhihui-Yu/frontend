@@ -1,0 +1,64 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            background-color: antiquewhite;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+        全局属性
+        - contenteditable       表示元素是否可被用户编辑, true 可以, false 不可以
+        - draggable             表示元素是否可以被拖动,   true 可以  false 不可以 -- 一般移动通过js来做
+        - hidden                隐藏元素
+        - spellcheck            规定是否对元素进行拼写和语法检查 true 检查, fasle 不检查  -- 浏览器要启动这个功能才行
+        - contextmenu           规定元素的上下文菜单, 鼠标右键点击时显示 -- 需要js配合
+        - data-*                用于存储页面的私有定制数据  通过获取元素身上的属性,然后拿出固定前缀的值
+
+     -->
+
+    <p contenteditable="true">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati dolor, deleniti
+        laborum non officiis numquam dignissimos iure, laudantium, velit vel molestias expedita quibusdam blanditiis
+        repellendus. Cupiditate aliquam est eaque a!</p>
+
+    <p hidden>hide me</p>
+
+    <div draggable="true" ondragend="go(event)"></div>
+
+    <script>
+        function go(e) {
+            alert("x:" + e.x + ",y:" + e.y)
+        }
+    </script>
+
+    <input type="text" name="text" spellcheck="true" id="">
+    <br>
+    <textarea contextmenu="xxxx" spellcheck="true" name="" id="" cols="30" rows="10">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores amet quia alias odio repellat nesciunt illum,
+         cum non dolorum incidunt unde labore blanditiis vitae! Accusamus laudantium harum iste architecto recusandae!
+    </textarea>
+
+    <p data-name="my-name" onclick="show(event)">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates consectetur nihil cumque
+        saepe magnam provident, corporis soluta unde, nobis non delectus possimus aut ipsam laborum iste error aperiam
+        quidem? Rerum.
+    </p>
+
+    <script>
+        function show(e) {
+           console.log(e)
+           alert(e["target"].attributes["data-name"].nodeValue)
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="https://www.baidu.com/s">
+        <input type="text" name="wd" id="">
+        <button> 搜索 </button>
+    </form>
+    <hr>
+    <form action="https://search.jd.com/search">
+        <input type="text" name="keyword" id="">
+        <button> 搜索 </button>
+    </form>
+
+    <!-- 
+        type="text"     : 文本
+        type="password" ：隐藏输入值
+        type="radio"    : 圆圈单选框
+        type="checkbox" ：方形复选框 
+        type="hidden"   ：隐藏显示
+        type="submit"   ：提交按钮  -- 不能写name，不然会变成 xxx=确认
+        type="reset"    ：重置按钮  -- 同上
+
+        checked: 默认选中
+        disabled 禁用
+     -->
+    <form action="https://search.jd.com/search">
+        <!-- 主要信息 -->
+        <fieldset>
+            <legend>重要信息</legend>
+            <!-- label for 填写 id， 与某个标签关联 -->
+            <label for="account-id">账户：</label>
+            <input type="text" id="account-id" name="account" value="zhangsan" maxlength="10"> <br />
+            <label>
+                密码：<input type="password" name="pwd" value="123" maxlength="6"><br />
+            </label>
+
+            性别: <br />
+            <label>
+                <input type="radio" name="sex" value="male" checked> 男
+            </label>
+            <label>
+                <input type="radio" name="sex" value="female"> 女
+            </label>
+        </fieldset>
+        
+        <fieldset>
+            <!-- legend 分组信息 -->
+            <legend>附加信息</legend>
+            <br />
+            爱好：
+            <input type="checkbox" name="hobby" value="smoke" checked> 抽烟
+            <input type="checkbox" name="hobby" value="drink"> 喝酒
+            <input type="checkbox" name="hobby" value="perm" disabled> 烫头
+            <br />
+            其他：<textarea name="other" id="" cols="30" rows="5"></textarea><br />
+    
+            籍贯:
+            <!-- selected 默认选中 -->
+            <select name="place" id="">
+                <option value="河北">河北</option>
+                <option value="山东" selected>山东</option>
+                <option value="北京">北京</option>
+            </select><br />
+        </fieldset>
+
+        <!-- 隐藏域 -->
+        <input type="hidden" name="abc" value="123">
+
+        <!-- 确认按钮 -->
+        <!-- <button>确定</button> -->
+        <input type="submit" value="确认" name="xxx">
+        <!-- 重置按钮
+        -->
+        <button type="reset">reset</button>
+        <input type="reset">
+
+        <button type="button">检测账户是否被注册</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        hr{
+            border: 1px solid black;
+            margin: 10px auto;
+        }
+        li {
+            display: inline-block;
+        }
+
+        aside {
+            float: left;
+            height: 70px;
+            margin-right: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 新增语义化标签 -->
+    <header>整个页面，或者部分区域的头部</header>
+    <nav>
+        <ol>
+            <li><a href="">导航</a> </li>
+            <li><a href=""></a>首页</a></li>
+            <li><a href=""></a>归档</a></li>
+        </ol>
+    </nav>
+    <aside>侧边栏</aside>
+    <!-- 
+        artcile 和 section 的区别
+        1. article 里面可以有多个section 
+        2. section 强调的是分段或者分块，如果你想将一块内容分成几段的时候，可以用section元素
+        3. articl 比 section 更强调独立性，一块内容如果比较独立，比较完整，应该使用article
+    -->
+    <article>
+        文章、帖子、杂志、新闻、博客、评论等
+        <section>页面中的某段文字，或者文章中的某段文字(通常包含标题)</section>
+    </article>
+
+    <main>文档的主要内容，少用</main>
+    <hgroup>包裹连续的标题，如文章主标题，副标题的组合</hgroup>
+    <footer>整个页面，或者部分区域的底部</footer>
+
+    <hr>
+    <!-- 新增 状态标签 -->
+
+    <!-- 
+        meter
+        - 语义：定义已知范围内的标量测量，被称作 gauge （尺度），例如 电量，磁盘用量等
+        - 属性：
+          - high     高值
+          - low      低值
+          - max      最大值
+          - min      最小值
+          - optimum  当使用了 low 和 high 属性时，它指明哪一个取值范围是更好的。例如，假设它介于最小值和 low 之间，那么 lower 区间就被认为是更佳的取值范围。
+          - value
+     -->
+    Heat the oven to<meter high="60" low="10" max="100" min="0" optimum="80" value="70"></meter>
+
+    <hr>
+    <!-- 
+        progress:
+        - 语义： 显示某个任务完成的进度，一般用于表示进度条，完成进度等
+        - 属性
+          - max    目标值
+          - value  当前值
+     -->
+    <label for="file">File progress:</label>
+    <progress id="file" max="100" value="80"></progress>
+
+    <hr>
+
+    <!-- 新增 列表标签 -->
+    <!-- 语义：用于搜索框的关键词提醒，搜一个字会出现相关的所有 -->
+    <input type="text" list="mydata">
+    <datalist id="mydata">
+        <option value="肝-胆">肝-胆</option>
+        <option value="心-小肠">心-小肠</option>
+        <option value="脾-胃">脾-胃</option>
+        <option value="肺-大肠">肺-大肠</option>
+        <option value="肾-膀胱">肾-膀胱</option>
+    </datalist>
+
+    <!-- 语义：用于展示问题和答案，对专有名词进行解释， summary 写在 details里面，用于指定问题或专有名词 -->
+    <details>
+        <summary>如何学会中医</summary>
+        <p>先学针灸</p>
+    </details>
+
+    <hr>
+
+    <!-- 新增 文本标签 -->
+    <!-- ruby 包裹需要注音的文字，rt写注音，rt必须在文字下面 -->
+    <ruby>
+        <span>魑魅魍魉</span>
+        <rt>chi mei wang liang</rt>
+    </ruby>
+    <br>
+    <!-- 标记文字，关键词提示 -->
+    xxx <mark>mark it</mark> xxx
+
+    <hr>
+
+    <!-- 新增表单功能 -->
+    <!-- 
+        表单控件新增属性
+        - placeholder        提示文字，适用于文字输入类的表单控件
+        - required           表示输入项必填，适用于除 按钮 外 其他表单控件
+        - autofouces         自动获取焦点，适合所有表单控件
+        - autocomplete       自动完成，设置 on/off，适用于文字输入类表单控件， 密码/多行输入框 不可用
+        - pattern            正则表达式，适用于文本输入类表单控件，
+          - 多行输入不可用，且空的输入框不会严重，一般与required配合
+     -->
+
+     <form action="#">
+        <input type="text" name="name" placeholder="输入用户名" autocomplete="on" autofocus required pattern="\w{4}" id=""> 
+        <br>
+        <input type="password" name="pwd" placeholder="输入密码" required id="">
+        <br>
+        <textarea name="info" id="" cols="30" rows="10" placeholder="更多"></textarea>
+        
+        <br>
+        gender:
+        <input type="radio" name="gender" value="男"> 男
+        <input type="radio" name="gender" value="女"> 女
+        <br>
+        hobby:
+        <input type="checkbox" name="hobby" value="看书">看书
+        <input type="checkbox" name="hobby" value="打球">打球
+        <input type="checkbox" name="hobby" value="跑步">跑步
+        <br>
+        <input type="submit">
+     </form>
+
+     <hr>
+     <!-- form type 新功能 -->
+     <form action="#" novalidate>
+        <!-- email -->
+        <input type="email" name="name" id="">
+        <br>
+        <!-- url -->
+        <input type="url" required name="url" id="">
+        <br>
+        
+        <!-- number 上下加数字-->
+        <input type="number" required step="2" name="number" id="">
+        <br>
+        
+        <!-- search 输入框带有 X 删除功能-->
+        <input type="search" required name="keyword">
+        <br>
+        
+        <!-- tel -->
+        <input type="tel" name="phone" required id="">
+        <br>
+        
+        <!-- range: 光照强度 -->
+        <input type="range" name="range" max="80" min="20" value="22">
+        <br>
+        
+        <!-- color 调色板 -->
+        <input type="color" name="color" id="">
+        <br>
+        
+        <!-- 日期 -->
+        <input type="date" name="date" id="" required>
+        <br>
+        
+        <!-- 月份 -->
+        <input type="month" name="month" required id="">
+        <br>
+        
+        <!-- 周 -->
+        <input type="week" name="week" required id="">
+        <br>
+        
+        <!-- 时间 -->
+        <input type="time" name="time" id="">
+        <br>
+        
+        <!-- 时间+日期 -->
+        <input type="datetime-local" name="datetime-local" id="">
+        <br>
+     </form>
+
+     <hr>
+
+     <!-- 
+        视频标签
+        - src                视频地址
+        - width/height       宽高，设置一个就好
+        - controls           显示视频控件，播放暂停等
+        - muted              视频静音
+        - autoplay           视频自动播放 -- 只有静音时候才有效，或者浏览器的媒体参与度高也会<浏览器认为你频繁用，就是想自动播放>
+        - loop               循环播放
+        - poster             视频封面地址
+        - preload            视频预加载： 使用autoplay 则忽略该属性； none：不加载  metadata 仅预先获取视频的元数据（长度） auto：下载整个视频文件，即使用户不希望
+    -->
+
+     <video src="" width="500" height="" controls muted autoplay loop poster="../images/wallhaven-exxj3l_2560x1440.png" preload="auto"></video>
+
+
+    <hr>
+
+    <!-- 
+        音频标签 ：与视频标签一样效果 但是 宽高需要用css配置
+        - src
+        - controls
+        - autoplay
+        - muted
+        - loop
+        - preload
+    -->
+    <audio src="" controls muted preload="auto"></audio>
+
+</body>
+
+</html>
