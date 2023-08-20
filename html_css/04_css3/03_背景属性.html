@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 600px;
+            border:1px solid black;
+
+            /* 
+                设置背景图的原点： 
+                - padding-box  从 padding 区域开始 -- 默认
+                - border-box   从 border  区域开始
+                - content-box  从 content 区域开始
+            */
+            background-origin: content-box;
+            background-image: url(../images/wallhaven-exxj3l_2560x1440.png);
+            background-repeat: no-repeat;
+            padding: 50px;
+            margin: 50px;
+
+
+            /* 
+                设置背景图的向外裁剪区域
+                - border-box    包括 border  区域
+                - padding-box   包括 padding 区域 -- 默认
+                - content-box   只有 content 区域
+                - text:         背景图只显示在文字上，使用要加 -webkit-
+            */
+            background-clip: content-box;
+
+
+            /* 
+                设置背景图尺寸
+                - 使用长度      不允许负
+                - 使用百分比    不允许负
+                - auto         背景图真实大小 默认
+                - contain      等比缩放，如果图片比例与容器比例不等，会让图片尽可能放入，容器可能有部分空白。
+                - cover        等比缩放，如果图片比例与容器比例不等，会丢失部分位置 -- 相对好的选择
+            */
+            background-size: contain;
+
+            /* 
+                背景的复合属性 
+                - background: color url repeat position / size origin clip;
+                - origin clip 都一样可以只写一个，否则前面是origin 后面是 clip
+                - size 必须在 position 的值后面，并用 / 分割     
+            */
+            
+            /* 多图背景设置 */
+            background: url(../images/cursor.png) no-repeat,
+                        url(../images/cursor.png) no-repeat right top,
+                        url(../images/cursor.png) no-repeat left bottom,
+                        url(../images/cursor.png) no-repeat right bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <div>xxxx</div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            padding: 10px;
+            background-color: orange;
+
+            /* 
+               盒子大小 [box-sizing]
+               - content-box: 宽高是内容区大小
+               - border-box 宽高是盒子总大小 
+            */
+            box-sizing: border-box;
+
+            /* 
+                调整盒子大小 [resize]
+                - none：用户无法调整元素的尺寸
+                - both：用户可调整元素的高度和宽度
+                - horizontal：用户可调整元素的宽度
+                - vertical：用户可调整元素的高度
+
+                - 单独设置 resize 属性是无效的，resize 属性需要与 overflow 属性结合使用才有效，并且 overflow 属性的值需要设置为 auto、hidden 或 scroll；
+                - 并不是所有的元素都可以设置 resize 属性，比如 img 和 table 属性就没办法使用 resize 属性。
+            */
+            overflow: hidden;
+            resize: both;
+
+            /* 
+                盒子阴影 [box-shadow]
+                - box-shadow: h-shadow v-shadow blur spread color insert
+                - h-shadow  水平阴影位置，必填 可以是负
+                - v-shadow  垂直阴影位置，必填 可以是负
+                - blur      模糊距离 可选
+                - spread    阴影外延 可选
+                - color     阴影颜色 可选
+                - inset     外阴变内阴 可选
+            */
+            /* 写两个值： 水平位置  垂直位置 */
+            /* box-shadow: 10px 10px; */
+
+            /* 写三个值 水平 垂直 颜色 */
+            /* box-shadow: 10px 10px bisque; */
+
+            /* 写三个值 水平 垂直 模糊值 */
+            /* box-shadow: 10px 10px 10px; */
+        
+            /* 写四个值 水平 垂直 模糊值 颜色 */
+            /* box-shadow: 10px 10px 10px olivedrab; */
+
+            /* 写五个值 水平 垂直 模糊值 外延值 颜色 */
+            /* box-shadow: 10px 10px 10px 10px olivedrab; */
+
+            /* 写六个值 水平 垂直 模糊值 外延值 颜色 */
+            box-shadow: 5px 5px 5px 15px olivedrab inset;
+
+            /* 不透明度： 0 透明， 1 透明 */
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

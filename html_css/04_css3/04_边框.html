@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            /* 
+                边框圆角
+                - 同时设置四个角的圆角
+            */
+            border-radius: 10px;
+
+            /* 分开设置每个角的圆角 */
+            border-top-left-radius: 20px;
+
+            border-top-right-radius: 20px;
+
+            border-bottom-left-radius: 20px;
+
+            border-bottom-right-radius: 20px;
+
+            /* 
+                分开设置每个角的圆角，几乎不用
+                - 左上x  右上x 右下x 左下x / 左上y 右上y 右下 左下
+            */
+            border-radius: 10px 5px 15px 20px / 20px 15px 10px 5px;
+
+
+            /* 
+                边框外轮廓(了解)
+                - outline-width     外轮廓宽
+                - outline-color     颜色
+                - outline-style     风格
+                  - none              无，不显示
+                  - dotted            虚线
+                  - solid             实线
+                  - double            双线
+                - outline-offset   轮廓与边框的距离
+
+                复合属性
+                outline： 5px solid blue;
+            */
+            outline-width: 5px;
+            outline-color: antiquewhite;
+            outline-style: double;
+            outline-offset: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 40px;
+            color: red;
+
+            /* 
+                文本阴影 [text-shadow]
+                - text-shadow: h-shadow v-shadow blur color;
+                  - h-shadow    水平阴影，允许负  必填
+                  - v-shadow    垂直阴影，允许负  必填
+                  - blur        模糊的距离       可填
+                  - color       颜色             可填
+                  - none        默认值，没有阴影
+            */
+            text-shadow: 10px 10px 4px burlywood;
+        }
+
+        div {
+            width: 400px;
+            height: 100px;
+            border: 1px solid;
+
+            /* 
+                文本换行 [white-space]
+                - normal            超出自动换行，文本中的换行会被识别为一个空格
+                - pre               原样输出
+                - pre-wrap          在pre基础上，超出边界的元素自动换行
+                - pre-line          在pre的基础上，超出边界的元素自动换行，且只识别文本中的换行，空格会忽略
+                - nowrap            强制不换行
+            */
+            white-space: pre;
+
+            /* 
+                文本溢出 [text-overflow + overflow]
+                - clip 默认值，将溢出部分裁掉
+                - ellipsis  溢出时，将溢出部分替换为 ... 
+
+                - 要与overflow属性一起用，overflow只要不是 visible就行。
+                - white-space 属性 需要指定不换行
+            */
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        ul>li {
+            font-size: 25px;
+
+            /* 
+                文本修饰，C3 升级了text-decoration，让其变成复合属性
+                - text-decoration： text-decoration-line || text-decoration-style || text-decoration-color
+
+                text-decoration-line [线条位置]
+                  - none                无 默认值
+                  - underline           下划线
+                  - overline            上划线
+                  - line-through        贯穿线
+                
+                text-decoration-style [线条形状]
+                  - solid               实线 默认
+                  - double              双线
+                  - dotted              点状线  
+                  - dashed              虚线
+                  - wavy                波浪线
+
+                text-decoration-color
+                  - 修饰线的颜色
+
+            */
+            text-decoration: line-through wavy red;
+
+            /* 
+                文本描边 [目前仅webkit支持]
+              
+                -webkit-text-stroke-width: 宽度
+                -webkit-text-stroke-color：颜色
+
+                -webkit-text-stroke： 复合属性
+            */
+            -webkit-text-stroke: 1px greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Love</p>
+
+    <hr>
+
+    <div>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur corporis, eaque minima sed nisi tempora quo!
+        Consectetur porro quos nesciunt voluptas, quia eaque, quod quidem ipsa in tempora iste nisi!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur ad aliquam soluta facere placeat veritatis
+        quas deleniti vitae, explicabo error pariatur ex nulla non mollitia repudiandae dolor, cupiditate provident
+        obcaecati?
+    </div>
+
+    <hr>
+
+    <ul>
+        <li>哈哈哈</li>
+        <li>嘻嘻嘻</li>
+    </ul>
+</body>
+
+</html>

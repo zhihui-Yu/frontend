@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        /* 
+            线性渐变 [ background-image: linear-gradient() ]
+            - 默认从上到下
+            - 可以修改方向
+              - 关键词          background-image: linear-gradient(to right,red, yellow, green); // to xxx, 指定渐变方向
+              - 角度            background-image: linear-gradient(10deg, red, yellow, green);  // 10deg  渐变方向向下移动10度
+              - 设置渐变位置     background-image: linear-gradient( red 50px, yellow 100px, green 150px);  // 什么颜色 在什么位置，中间是渐变过程
+         */
+        .box1 {
+            background-image: linear-gradient(red, yellow, green);
+        }
+
+        .box2 {
+            background-image: linear-gradient(to right, red, yellow, green);
+        }
+
+        .box3 {
+            background-image: linear-gradient(10deg, red, yellow, green);
+        }
+
+        .box4 {
+            background-image: linear-gradient( red 50px, yellow 100px, green 150px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+
+</html>

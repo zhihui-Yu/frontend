@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+          新增的长度单位 
+          - rem    只与根元素的字体大小的倍数
+          - vw     视口宽度的百分比，10vw=10%
+          - vh     视口高度的百分比，10vh=10%
+          - vmax   视口宽高中大的那个的百分比 max(vw/vh)
+          - vmin   视口宽高中小的那个的百分比 min(vw/vh)
+
+          颜色     rgba，hsl，hsla 在 html_css/02_css/05_颜色.html
+          选择器   html_css/02_css/03_伪类选择器.html
+        */
+        .box1 {
+            width: 10rem;
+            height: 10rem;
+            background-color: orange;;
+        }
+
+        .box2{
+            width: 10vw;
+            height: 10vw;
+            background-color: blue;
+        }
+
+        .box3{
+            width: 10vw;
+            height: 10vh;
+            background-color: green;
+        }
+
+        .box4{
+            width: 10vmax;
+            height: 15vmin;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+</body>
+
+</html>
