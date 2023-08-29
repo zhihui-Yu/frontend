@@ -1,0 +1,172 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+        }
+
+        hr {
+            margin-top: 50px;
+        }
+
+        .box {
+            border: 1px solid black;
+            margin-top: 10px;
+        }
+
+        /* 变换使用 transform 实现：默认原点在左上角，X轴向左为正，Y轴向下为正 */
+
+        /*
+          位移： 
+          - 与相对定位类似，不脱离文档流，不影响其他元素
+          - 区别： 相对定位参考其父元素，位移参考自己
+          - 与相对定位相比，浏览器处理位移效率更高
+          - 位移对行内元素失效 ！！！！！
+          - 位移+定位 => 水平垂直居中
+          .box{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%)
+          }
+        */
+        .inner1 {
+            background-color: antiquewhite;
+
+            /* translate(水平，垂直) */
+            /* transform: translate(10px, 20px); */
+
+            /* 向左平移 */
+            /* transform: translateX(10px); */
+
+            /* 向下平移 */
+            /* transform: translateY(10px); */
+
+            transform: translateX(10px) translateY(10px);
+        }
+
+
+        /* 
+            缩放 
+            - 对元素大小进行缩放
+            - 1表示不缩放, >1 放大, < 1 缩小. 可以是负数,但是基本不用.
+            - 借助缩放,可以实现小于 12px的文字
+        */
+        .inner2 {
+            background-color: antiquewhite;
+
+            /* scale(水平，垂直) */
+            /* transform: scale(0.8, 0.5); */
+
+            /* X轴缩小 */
+            /* transform: scaleX(0.7); */
+
+            /* Y 轴缩小 */
+            transform: scaleY(0.6);
+
+        }
+
+        /* 
+            旋转
+            - 让选择在二维平面上 顺时针或者逆时针旋转
+            - rotate(xdeg) 设置度数，正数顺时针，负数逆时针 
+        */
+        .inner3 {
+            background-color: antiquewhite;
+            
+            transform: rotate(20deg);
+        }
+
+        /* 
+            扭曲
+            - 让元素在二维平面内被“拉扯”进而“走形”，实际开发不用。
+            - skew(x,y) 可以单独写，也可以写一起； X[Y]水平[垂直]方向，将元素的左上角与右下角进行水平[垂直]拉扯
+
+        */
+        .inner4 {
+            background-color: antiquewhite;
+            
+            /* transform: skew(20deg,20deg); */
+            /* transform: skewX(20deg); */
+            transform: skewY(20deg);
+        }
+
+        /* 
+            多重变换
+            - 多种变换，使用同一个transform属性
+
+            > 使用时，建议最后旋转，旋转会改变坐标朝向
+        */
+        .inner5 {
+            background-color: burlywood;
+            
+            /* 先旋转在位移： 不利于计算*/
+            /* transform:  rotate(35deg) translate(-50%,-50%); */
+            
+            transform: translate(-20%,-50%) rotate(35deg) scale(0.5);
+        }
+
+        /* 
+            变换原点：
+            - 元素变换时，默认原点是元素中心，但可以用属性变更
+            - 修改原点对位移没有影响，但是对旋转和缩放有影响
+            - 如果是两个值，前者X 后者Y
+            - 如果只提供一个，若是像素值，表示横坐标，纵坐标取50%；如果是关键词，则另一个取50%
+        */
+        .inner6{
+            background-color: burlywood;
+            transform: translate(25%,25%) scale(0.5,0.5) rotate(45deg) ;
+
+            /* 百分比相对于自身：在自身 (20%x,20%y)的点为中心 */
+            /* transform-origin: 20% 20%; */
+
+            /* 左上角为中心点  */
+            /* transform-origin: left top; */
+
+            /* 元素自身 （50px,50px）的点为中心 */
+            /* transform-origin: 50px 50px;  */
+
+            /* 第二个默认 50% */
+            transform-origin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="inner1">你好啊</div>
+    </div>
+
+    <hr>
+    <div class="box">
+        <div class="inner2">你好啊</div>
+    </div>
+
+    <hr>
+    <div class="box">
+        <div class="inner3">你好啊</div>
+    </div>
+
+    <hr>
+    <div class="box">
+        <div class="inner4">你好啊</div>
+    </div>
+
+    <hr>
+    <div class="box">
+        <div class="inner5">你好啊</div>
+    </div>
+
+    <hr>
+    <div class="box">
+        <div class="inner6">你好啊</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        /* 
+            径向渐变 [ background-image: radial-gradient() ]
+            - 默认从圆形四散，不一定是正圆，根据容器宽高决定
+            - 可以修改方向
+              - 关键词          background-image: radial-gradient(at right,red, yellow, green); // at xxx, 指定圆心位置
+              - 像素值          background-image: radial-gradient(at 100px 50px, red, yellow, green);  // at 100px 50px  指定圆心位置
+              - 设置形状        background-image: radial-gradient( red 50px, yellow 100px, green 150px);  // 什么颜色 在什么位置，中间是渐变过程
+              - 设置圆的半径    background-image: radial-gradient(100px 50px, red, yellow, green) // 100px 横向半径， 50px 垂直半径
+              - 设置渐变范围    background-image: radial-gradient(red 50px, yellow 80px, green 90px) // red最大到50px，然后渐变成yellow，yellow渐变为green到90
+         */
+        .box1 {
+            background-image: radial-gradient(red, yellow, green);
+        }
+
+        .box2 {
+            background-image: radial-gradient(at right, red, yellow, green);
+        }
+
+        .box3 {
+            background-image: radial-gradient(at 100px 50px, red, yellow, green);
+        }
+
+        .box4 {
+            width: 300px;
+            background-image: radial-gradient(circle, red 50px, yellow 100px, green 150px);
+        }
+
+        .box5 {
+            /* 100px 横向半径， 50px 垂直半径 */
+            background-image: radial-gradient(100px 50px, red, yellow, green);
+        }
+
+        .box6 {
+            width: 300px;
+            /*  */
+            background-image: radial-gradient(red 50px, yellow 80px, green 90px);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+    <div class="box6"></div>
+</body>
+
+</html>

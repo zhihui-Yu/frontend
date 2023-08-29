@@ -1,0 +1,52 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        /* 
+            重复渐变 [ background-image: repeating-radial-gradient || repeating-linear-gradient ]
+            - 只对没有发生渐变的区域做重复渐变, 填充满整个区域
+         */
+        .box1 {
+            background-image: repeating-linear-gradient(red 10px, yellow 20px, green 30px);
+        }
+
+        .box2 {
+            background-image: repeating-radial-gradient(red 10px, yellow 20px, green 30px)
+        }
+
+        .box3 {
+            width: 300px;
+            height: 400px;
+            border: 1px black solid;
+            padding: 0 20px 20px 20px;
+            background-image: repeating-linear-gradient(transparent 0px, transparent 19px, gray 20px);
+            background-clip: content-box;
+        }
+
+        .box4 {
+            background-image: repeating-radial-gradient(transparent 0px, #333 200px);
+            border-radius: 100px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"> </div>
+    <div class="box4"></div>
+</body>
+
+</html>

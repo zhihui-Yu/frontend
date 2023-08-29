@@ -1,0 +1,56 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 
+        字体通过 @font-face 导入，浏览器会自动下载该字体，这样就不依赖于用户电脑的字体了。
+        但是一般ttf文件较大，字体多所以文件大，一般针对某些字体进行单独定制
+        可以用阿里Web字体定制工具 https://www.iconfont.cn/webfont#!/webfont/index
+     -->
+    <style>
+        /* @font-face {
+            font-family: "custom";
+            src: url('./font/xxx.ttf');
+        }
+
+        .cutom-font {
+            font-family: "custom";
+        } */
+
+        /* 具有更好的兼容性 */
+        @font-face {
+            font-family: "webfont";
+            font-display: swap;
+            src: url('./font/webfont.eot');
+            /* IE9 */
+            src: url('./font/webfont.eot?#iefix') format('embedded-opentype'),
+                /* IE6-IE8 */
+                url('./font/webfont.woff2') format('woff2'),
+                url('./font/webfont.woff') format('woff'),
+                /* chrome、firefox */
+                url('./font/webfont.ttf') format('truetype'),
+                /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+                url('./font/webfont.svg#webfont') format('svg');
+            /* iOS 4.1- */
+        }
+
+        .web-font {
+            font-family: "webfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+
+<body>
+    <span>这一分钟，你和我在一起，因为你，我会记得那一分钟。从现在开始，我们就是一分钟的朋友。这是事实，你改变不了，因为已经完成了。</span>
+    <br>
+    <span class="web-font">这一分钟，你和我在一起，因为你，我会记得那一分钟。从现在开始，我们就是一分钟的朋友。这是事实，你改变不了，因为已经完成了。</span>
+</body>
+
+</html>

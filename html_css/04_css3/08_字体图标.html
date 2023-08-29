@@ -1,0 +1,85 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- 
+        字体图标 
+        - 由于图片在不同比例下会失真，但是字体不会，所以设计了一种跟图标一样的字体，不会失真。
+
+        字体图标的具体使用方式，每个平台都不尽相同，所以要参考平台的指南。
+        
+        阿里图标：https://www.iconfont.cn/
+
+    -->
+
+    <style>
+        /* 可以参考 html_css/04_css3/font2/demo_index.html */
+
+        /* unicode */
+        @font-face {
+            font-family: 'iconfont';
+            src: url('./font2/iconfont.ttf?t=1693321224378') format('truetype');
+        }
+
+        .iconfont-custom {
+            font-family: "iconfont" !important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            font-size: 200px;
+        }
+    </style>
+
+    <!-- font class  -->
+    <link rel="stylesheet" href="./font2/iconfont.css">
+
+    <!-- 
+        Symbol 有颜色： 
+        - 支持多色图标了，不再受单色限制。
+        - 通过一些技巧，支持像字体那样，通过 font-size, color 来调整样式。
+        - 兼容性较差，支持 IE9+，及现代浏览器。
+        - 浏览器渲染 SVG 的性能一般，还不如 png-->
+    <script src="./font2/iconfont.js"></script>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+        }
+    </style>
+
+</head>
+
+<body>
+    <span class="iconfont-custom ">&#xe64e;</span>
+    <span class="iconfont-custom ">&#xe64f;</span>
+    <span class="iconfont-custom ">&#xe650;</span>
+
+    <hr>
+    <span class="iconfont icon-a-016_ditudingwei"></span>
+    <span class="iconfont icon-a-016_daohanglan"></span>
+    <span class="iconfont icon-a-016_dingdan-04"></span>
+
+    <hr>
+
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-a-016_ditudingwei"></use>
+    </svg>
+    
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-a-016_daohanglan"></use>
+    </svg>
+    
+    <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-a-016_dingdan-04"></use>
+    </svg>
+</body>
+
+</html>
