@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            /* 开启3D视图,必须在父元素中设置 */
+            transform-style: preserve-3d;
+            /* 设置景深，就是观察3D元素的距离，可以想象成Z轴 */
+            perspective: 100px;
+            
+            /* 设置透视点位置，默认在元素中心。 值：向右偏移位，向下偏移位； 一般不设置 */
+            /* perspective-origin: 200px 200px; */
+        }
+        .inner{
+            font-size: 40px;
+            border: 1px black solid;
+            background-color: grey;
+            width: 300px;
+            height: 300px;
+
+            /* 位移 */
+            /* 沿着Z轴位移，有点像放大缩小，不设置景深 没有效果 */
+            /* transform: translateZ(5px); */
+            /* 使用这个属性，必须3个都写，右，下，Z */
+            /* transform: translate3d(20px,20px,20px); */
+
+            /* 旋转 */
+            /* rotate3d(x轴，y轴，z轴，旋转度数) */
+            /* transform: rotate3d(1,1,1,30deg); */
+
+            /* 缩放 */
+            /* 对于Z轴的缩放，就是Z的厚度，效果不明显，需要特殊处理才能看出效果 */
+            /* transform: scaleZ(1.5); */
+            /* 缩放： (x,y,z) */
+            /* transform: scale3d(1.5,1.5,1.5); */
+
+            /* 多重变换: 最后做旋转，这样好计算 */
+            transform: translateZ(20px) scaleZ(1) rotateY(40deg);
+
+            /* 元素背面朝向观察者时是否可见: 背面不可见 */
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="inner">你好啊</div>
+    </div>
+</body>
+</html>

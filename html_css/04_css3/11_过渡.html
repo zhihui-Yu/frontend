@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 过渡可以在不用flash动画，不使用js下，让元素样式发生变化 */
+        .outer{
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+
+            /* 
+              设置需要发送过渡的属性
+              - none  没有属性过渡
+              - all 所有能过渡的都发送过渡
+
+              不是所有的属性都能过渡，值为数字，或者能转为数字的都支持。
+              如：颜色，长度，百分比，z-index，opacity 2d变化，3d变化，阴影
+            */
+            transition-property: all;
+        }
+
+        /* 加在hover上，会导致失去hover时候 没有过渡。所以放在主元素上就好，hover只需要写变更的属性 */
+        .outer:hover{
+            width: 500px;
+            color: brown;
+            /* 过渡的时间，单位 ms、s */
+            transition-duration: 10s;
+            /* 过渡开始的延迟时间，单位 ms、s */
+            transition-delay: 0.3s;
+            /* 
+              过渡的类型：
+              - ease：   平滑过渡 -- 默认值
+              - linear   线性过渡
+              - ease-in  慢 -> 快
+              - ease-out 快 -> 慢
+              - ease-in-out 慢 -> 快 -> 慢
+              - step-start  等于  step(1,start)
+              - step-end    等于  step(1, end) --  start 在时间开始时就执行过渡 end 在时间结束时执行过渡（默认值）
+              - steps(number,?)  步进，第一个为步数，第二个是start/end,默认end
+              - cubic-bezie(number,number,number,number)  贝塞尔曲线: https://cubic-bezier.com/  可以根据函数来设置库快慢
+            */
+            /* 10s 2步，则 end是在5s后执行，start是0s开始 */
+            transition-timing-function: step-end; 
+
+            /* 复合属性, 一个时间表示 duration，两个则表示 duration 和 delay，其他没有要求 */
+            transition: 1s 1s linear all;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer"></div>
+</body>
+</html>
