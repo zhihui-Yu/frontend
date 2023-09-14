@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 300px;
+            height: 300px;
+            background-color: antiquewhite;
+            /* 定义动画效果 */
+            animation-name: move;
+            animation-duration: 5s;
+            animation-delay: 1s;
+            /* 动画效果，与过渡一样的值， 
+               ease|linear|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,?)|cubic-bezie 
+            */
+            animation-timing-function: ease;
+            /* number: 次数， infinite：无限 */
+            /* animation-iteration-count: infinite; */
+            
+            /* 动画方向： normal 正 | reverse 反 | alternate 先正再反 | alternate-reverse 先反后正 */
+            /* animation-direction: alternate; */
+
+            /* 设置动画最后的状态：  forwards ：结束时状态；backwards 开始时状态， 无限循环开启后该属性无效 */
+            animation-fill-mode: forwards;
+
+            /* 设置播放状态： paused 暂停； running 运行 -- 一般单独使用*/
+            animation-play-state: running;
+
+            /* 复合属性 animation: name duration timing-function delay iteration-count direction fill-mode; */
+            /* 只设置一个时间 是duration，两个则是 duration delay */
+            /* animation: move 5s; */
+        }
+
+        /* 动画由帧组成，通过定义每一帧的效果，来定义动画如何动 */
+        @keyframes move {
+
+            /* 初始样式 */
+            from {}
+
+            /* 可以混合用，也可以单独用 */
+            20% {
+                background-color: aquamarine;
+            }
+
+            to {
+                width: 1000px;
+                background-color: azure;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer"></div>
+</body>
+
+</html>

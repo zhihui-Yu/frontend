@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            /* 列数 */
+            /* column-count: 5; */
+            /* 列宽 */
+            /* column-width: 200px; */
+
+            /* 复合属性 */
+            columns: 5 300px;
+
+            /* 列边距 */
+            column-gap: 50px;
+
+
+            /* 列之间的边框样式 */
+            /* column-rule-style: solid; */
+            /* 边框颜色 */
+            /* column-rule-color: antiquewhite; */
+            /* 边框宽度 */
+            /* column-rule-width: 20px; */
+
+            /* 复合属性 */
+            column-rule: solid aquamarine 20px;
+
+        }
+
+        .title {
+            font-size: 30px;
+            /* 是否跨列显示: 对标题标签有效 */
+            column-span: all;
+        }
+
+        img{
+            transition: 0.2s linear;
+        }
+
+        img:hover{
+            box-shadow: 0px 0px 20px black;
+            transform: scale(1.1);
+        }
+
+        .img1 {
+            width: 200px;
+        }
+
+        .img2 {
+            width: 50px;
+        }
+
+        .img3 {
+            width: 150px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <h2 class="title">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </h2>
+        <img class="img1" src="../images/bj.jpg" alt="">
+        <img class="img3" src="../images/wallhaven-exxj3l_2560x1440.png" alt="">
+        <img class="img1" src="../images/bj.jpg" alt="">
+        <img class="img2" src="../images/cursor.png" alt="">
+        <img class="img1" src="../images/bj.jpg" alt="">
+        <img class="img2" src="../images/cursor.png" alt="">
+        <img class="img1" src="../images/bj.jpg" alt="">
+        <img class="img3" src="../images/wallhaven-exxj3l_2560x1440.png" alt="">
+        <img class="img1" src="../images/bj.jpg" alt="">
+        <img class="img3" src="../images/wallhaven-exxj3l_2560x1440.png" alt="">
+        <img class="img2" src="../images/cursor.png" alt="">
+        <img class="img3" src="../images/wallhaven-exxj3l_2560x1440.png" alt="">
+        <img class="img2" src="../images/cursor.png" alt="">
+        <img class="img3" src="../images/wallhaven-exxj3l_2560x1440.png" alt="">
+        <img class="img2" src="../images/cursor.png" alt="">
+        <img class="img1" src="../images/bj.jpg" alt="">
+        <img class="img3" src="../images/wallhaven-exxj3l_2560x1440.png" alt="">
+    </div>
+</body>
+
+</html>
