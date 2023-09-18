@@ -3,13 +3,12 @@
 learn all tech about fe
 
 ing:
-- css
+- js
 
 done:
-- html
+- html5 + css3
 
 todo:
-- js
 - jquery
 - vue
 - react

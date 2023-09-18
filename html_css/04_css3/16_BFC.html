@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+            BFC - block formatting context (块级格式上下文)，元素的特殊化
+            - 默认关闭，在满足某些条件后，该特性被激活
+            - 激活，又称开启了BFC
+
+            解决什么问题
+            - 子元素不会出现 margin 塌陷问题
+            - 自己不会被其他浮动元素覆盖
+            - 就算子元素浮动，也不会塌陷
+
+            如何开启
+            - 根元素
+            - 浮动元素
+            - 绝对定位, 固定定位的元素
+            - 行内块元素
+            - 表格单元格 table | thead | tbody | tfoot | th | td | tr | caption 
+            - overflow 值不为 visible 的 块元素
+            - 伸缩项目
+            - 多列容器
+            - column-span：all 的元素， 即使该元素没有包裹在多列容器内
+            - display： flow-root
+        */
+
+        .outer {
+            width: 400px;
+            background-color: #888;
+            /* float: left; */
+            /* overflow: auto; */
+            /* column-count: 1; */
+            /* display: flow-root; */
+        }
+
+        .inner1 {
+            background-color: olive;
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+
+        .inner2 {
+            background-color: orchid;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 50px;
+        }
+
+        .inner3 {
+            background-color: orange;
+            width: 100px;
+            height: 100px;
+            /* overflow: hidden; */
+            display: flow-root;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+        <div class="inner1"></div>
+        <div class="inner2"></div>
+        <div class="inner3"></div>
+    </div>
+</body>
+
+</html>

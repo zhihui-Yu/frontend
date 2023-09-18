@@ -1,0 +1,75 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*
+        媒体查询类型 -- 响应式布局，根据不同屏幕宽度显示样式不同
+        - all     所有设备
+        - screen  电子屏幕，包括平板，手机，电脑
+        - print   打印机
+        - 一些废弃的 
+        - 细节 https://developer.mozilla.org/zh-CN/docs/Web/CSS/@media
+
+        媒体特性
+        - width                 视口宽度
+        - max-width             视口最大宽度
+        - min-width             视口最小宽度
+        - height                视口高度
+        - max-height            视口最大高度
+        - min-height            视口最小高度
+        - device-width          设备屏幕宽度
+        - max-device-width      设备屏幕的最大宽度
+        - min-device-width      设备屏幕的最小宽度
+        - orientation           视口的旋转方向，是否横屏。  1.portrait 纵向 高大于宽  2. landscape 横向 宽大于高
+
+
+        运算符
+        - and         并且
+        - , | or      或者
+        - not         否定
+        - only        肯定
+
+        常用阈值
+        - 超小 -- 768px  -- 中等 -- 992px -- 大屏 -- 1200px -- 超大屏
+
+        对于不同的屏幕大小，引入不同的css
+        -  <link rel="stylesheet" media="具体媒体查询" href="相应的css文件">
+        */
+
+        .outer {
+            width: 100px;
+            height: 100px;
+            background-color: antiquewhite;
+        }
+
+        /* 打印时显示的样式，需要在打印开启背景才能看见背景 */
+        @media print {
+            .outer {
+                background-color: burlywood;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .outer {
+                background-color: #888;
+            }
+        }
+
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            .outer {
+                background-color: orange;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">xxx</div>
+
+</body>
+
+</html>
