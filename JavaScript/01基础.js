@@ -143,3 +143,117 @@ console.log(a);
 
 a = a++; // 将 原值赋值给对象，相当于没变化，如果a是字符串，可能发生类型隐式变化
 console.log(a);
+
+/**
+ *  !   非 -> 取反
+ *  &&  与 -> 两侧条件都是true，才true
+ *  ||  或 -> 两侧有一个true 就是 true
+ */
+
+a = true
+a = !a
+console.log(a)
+
+a = a && !a
+console.log(a)
+
+a = a || !a
+console.log(a)
+
+// !!!!!!!!!!! 从哪里结束，返回断点  !!!!!!!!
+var result = 5 && 6 // return 6
+console.log(result)
+result = 0 && 2 // return 0
+console.log(result)
+result = 0 || 1 // return 1
+console.log(result)
+result = 1 || 0 // return 1
+console.log(result)
+
+a += 5
+a -= 5
+a /= 5
+a %= 5
+a *= 5
+console.log(a)
+
+// 转为数字比较， null = 0
+console.log(10 > null)
+
+// hello 转为 NaN, 任何值和其比较都是false
+console.log(1 > "hello")
+
+// 数字比较  1>0
+console.log(true > false)
+
+// 将字符串转为数字比较
+console.log("11" > 5)
+
+// 如果两侧都是字符串， 比较unicode 编码
+console.log("11" > "5")
+
+// 比较数字类型的字符串时， 一定要转型，不然会有不可预期问题
+// +"5" => 5
+console.log("11" > +"5")
+
+// unicode 编码 使用
+console.log("\u1c00")
+
+// 在html中使用unicode, &#编码; 这里需要十进制
+
+
+// == : 比较时，类型不同 则转换成相同类型，再比较
+console.log(1 == '1')
+
+// undefined来自 null， 所以相等
+console.log(undefined == null)
+
+// NaN 不和任何值相等，包括 NaN， 只能用isNaN方法
+console.log(NaN == NaN)
+console.log(isNaN(NaN))
+
+// ===  类型不同直接返回 false
+console.log(1 === '1')
+// undefined 与 null 相等，但不全等
+console.log(undefined === null)
+
+// 三目运算符
+console.log(1 > 2 ? "1" : "2")
+
+// && > ||
+var x = 1 || 2 && 3
+console.log(x)
+
+// if 条件语句
+var a = 10
+if (a > 10) {
+    console.log("a > 10")
+} else if (a < 5) {
+    console.log("a < 5")
+} else {
+    console.log("a = " + a)
+}
+
+// swicth 分支判断
+switch (a) {
+    case 1:
+        console.log("1")
+        break
+    case 10:
+        console.log(a)
+        break
+    default:
+        console.log("default")
+}
+
+// while
+while (a > 0) {
+    a--
+}
+
+// do while
+do {
+    a--
+} while (a > 0)
+
+// for
